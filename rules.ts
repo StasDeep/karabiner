@@ -42,14 +42,6 @@ const rules: KarabinerRules[] = [
         },
         to: [
           {
-            "key_code": "left_shift",
-            "modifiers": [
-              "left_command",
-              "left_control",
-              "left_option"
-            ]
-          },
-          {
             set_variable: {
               name: "hyper",
               value: 1,
@@ -96,22 +88,58 @@ const rules: KarabinerRules[] = [
   },
   ...createHyperSubLayers({
     c: app('Cursor'),
-    // n = "Notes"
+    // n = "N"otes
     n: app('Craft'),
     t: app("iTerm"),
     e: app("Telegram"),
     s: app("Slack"),
-    a: app("Google Chrome"),
+    a: app("Arc"),
+    p: app("Adobe Photoshop 2024"),
+    f: app("Finder"),
+    // q = Re"q"uest
+    q: app("Postman"),
     // b = "B"rowse
     b: {
       y: open("https://youtube.com"),
       m: open("https://maps.google.com"),
       e: open("https://mail.google.com"),
     },
+    r: {
+      e: open("raycast://extensions/bgnfu7re/craftdocs/search"),
+      c: open("raycast://extensions/bgnfu7re/craftdocs/dailyNotes"),
+      s: open("raycast://extensions/raycast/snippets/search-snippets"),
+      p: open("raycast://extensions/thomas/visual-studio-code/index"),
+    },
     // w = "Window"
     w: {
-      equal_sign: open("raycast://extensions/raycast/window-management/make-larger"),
-      hyphen: open("raycast://extensions/raycast/window-management/make-smaller"),
+      equal_sign: open("-g raycast://extensions/raycast/window-management/make-larger"),
+      hyphen: open("-g raycast://extensions/raycast/window-management/make-smaller"),
+      l: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
+      m: open("-g raycast://extensions/raycast/window-management/maximize"),
+    },
+    1: {
+      to: [
+        {
+          "key_code": "1",
+          "modifiers": ["left_shift","left_command","left_control","left_option"]
+        }
+      ]
+    },
+    2: {
+      to: [
+        {
+          "key_code": "2",
+          "modifiers": ["left_shift","left_command","left_control","left_option"]
+        }
+      ]
+    },
+    3: {
+      to: [
+        {
+          "key_code": "3",
+          "modifiers": ["left_shift","left_command","left_control","left_option"]
+        }
+      ]
     }
     // o = "Open" applications
     // o: {
