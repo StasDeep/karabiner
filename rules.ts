@@ -96,6 +96,7 @@ const rules: KarabinerRules[] = [
     a: app("Arc"),
     p: app("Adobe Photoshop 2024"),
     f: app("Finder"),
+    g: app("ChatGPT"),
     // q = Re"q"uest
     q: app("Postman"),
     // b = "B"rowse
