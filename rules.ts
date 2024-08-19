@@ -91,14 +91,18 @@ const rules: KarabinerRules[] = [
     // n = "N"otes
     n: app('Craft'),
     t: app("iTerm"),
+    q: app("iTerm"),
     e: app("Telegram"),
     s: app("Slack"),
     a: app("Arc"),
     p: app("Adobe Photoshop 2024"),
     f: app("Finder"),
     g: app("ChatGPT"),
-    // q = Re"q"uest
-    q: app("Postman"),
+    l: app("Calendar"),
+    // m = "M"usic
+    m: app("Spotify"),
+    // x = "X"HR
+    x: app("Postman"),
     // b = "B"rowse
     b: {
       y: open("https://youtube.com"),
@@ -110,6 +114,8 @@ const rules: KarabinerRules[] = [
       c: open("raycast://extensions/bgnfu7re/craftdocs/dailyNotes"),
       s: open("raycast://extensions/raycast/snippets/search-snippets"),
       p: open("raycast://extensions/thomas/visual-studio-code/index"),
+      w: open("raycast://script-commands/windows-setup"),
+      d: open("raycast://extensions/raycast/system/toggle-system-appearance"),
     },
     // w = "Window"
     w: {
@@ -117,6 +123,7 @@ const rules: KarabinerRules[] = [
       hyphen: open("-g raycast://extensions/raycast/window-management/make-smaller"),
       l: open("-g raycast://extensions/raycast/window-management/almost-maximize"),
       m: open("-g raycast://extensions/raycast/window-management/maximize"),
+      c: open("-g raycast://extensions/raycast/window-management/center"),
     },
     1: {
       to: [
