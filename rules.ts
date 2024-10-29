@@ -99,6 +99,8 @@ const rules: KarabinerRules[] = [
     f: app("Finder"),
     g: app("ChatGPT"),
     l: app("Calendar"),
+    // v = "V"irtual
+    v: app('Gather'),
     // m = "M"usic
     m: app("Spotify"),
     // x = "X"HR
@@ -111,7 +113,8 @@ const rules: KarabinerRules[] = [
     },
     r: {
       e: open("raycast://extensions/bgnfu7re/craftdocs/search"),
-      c: open("raycast://extensions/bgnfu7re/craftdocs/dailyNotes"),
+      c: open("raycast://extensions/mooxl/coffee/caffeinate"),
+      x: open("raycast://extensions/mooxl/coffee/decaffeinate"),
       s: open("raycast://extensions/raycast/snippets/search-snippets"),
       p: open("raycast://extensions/thomas/visual-studio-code/index"),
       w: open("raycast://script-commands/windows-setup"),
