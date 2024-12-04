@@ -3,6 +3,56 @@ import { KarabinerRules } from "./types";
 import { createHyperSubLayers, app, open, rectangle } from "./utils";
 
 const rules: KarabinerRules[] = [
+  {
+    "description": "F-keys with modifier send with fn",
+    "manipulators": [
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "f6",
+          "modifiers": {
+            "mandatory": ["shift"],
+          }
+        },
+        "to": [
+          {
+            "key_code": "f6",
+            "modifiers": ["fn", "shift"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "f12",
+          "modifiers": {
+            "mandatory": ["option"],
+          }
+        },
+        "to": [
+          {
+            "key_code": "f12",
+            "modifiers": ["fn", "option"]
+          }
+        ]
+      },
+      {
+        "type": "basic",
+        "from": {
+          "key_code": "f8",
+          "modifiers": {
+            "mandatory": ["option"],
+          }
+        },
+        "to": [
+          {
+            "key_code": "f8",
+            "modifiers": ["fn", "option"]
+          }
+        ]
+      },
+    ]
+  },
   // Define the Hyper key itself
   {
     "description": "Cmd+Caps Lock to Caps Lock",
@@ -117,7 +167,9 @@ const rules: KarabinerRules[] = [
       x: open("raycast://extensions/mooxl/coffee/decaffeinate"),
       s: open("raycast://extensions/raycast/snippets/search-snippets"),
       p: open("raycast://extensions/thomas/visual-studio-code/index"),
+      j: open("raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"),
       w: open("raycast://script-commands/windows-setup"),
+      o: open("raycast://extensions/stanislau/totp/get-otp"),
       d: open("raycast://extensions/raycast/system/toggle-system-appearance"),
     },
     // w = "Window"
@@ -132,7 +184,7 @@ const rules: KarabinerRules[] = [
       to: [
         {
           "key_code": "1",
-          "modifiers": ["left_shift","left_command","left_control","left_option"]
+          "modifiers": ["left_shift", "left_command", "left_control", "left_option"]
         }
       ]
     },
@@ -140,7 +192,7 @@ const rules: KarabinerRules[] = [
       to: [
         {
           "key_code": "2",
-          "modifiers": ["left_shift","left_command","left_control","left_option"]
+          "modifiers": ["left_shift", "left_command", "left_control", "left_option"]
         }
       ]
     },
@@ -148,7 +200,7 @@ const rules: KarabinerRules[] = [
       to: [
         {
           "key_code": "3",
-          "modifiers": ["left_shift","left_command","left_control","left_option"]
+          "modifiers": ["left_shift", "left_command", "left_control", "left_option"]
         }
       ]
     }
@@ -698,7 +750,8 @@ fs.writeFileSync(
           "virtual_hid_keyboard": {
             "country_code": 0,
             "indicate_sticky_modifier_keys_state": true,
-            "mouse_key_xy_scale": 100
+            "mouse_key_xy_scale": 100,
+            "keyboard_type_v2": "ansi"
           }
         }
       ]

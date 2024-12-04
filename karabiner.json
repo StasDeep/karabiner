@@ -18,6 +18,71 @@
         },
         "rules": [
           {
+            "description": "F-keys with modifier send with fn",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f6",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f6",
+                    "modifiers": [
+                      "fn",
+                      "shift"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f12",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f12",
+                    "modifiers": [
+                      "fn",
+                      "option"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "f8",
+                  "modifiers": {
+                    "mandatory": [
+                      "option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f8",
+                    "modifiers": [
+                      "fn",
+                      "option"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
             "description": "Cmd+Caps Lock to Caps Lock",
             "manipulators": [
               {
@@ -2770,6 +2835,30 @@
               {
                 "to": [
                   {
+                    "shell_command": "open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+                  }
+                ],
+                "description": "Open raycast://extensions/raycast/emoji-symbols/search-emoji-symbols",
+                "type": "basic",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_r",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
                     "shell_command": "open raycast://script-commands/windows-setup"
                   }
                 ],
@@ -2777,6 +2866,30 @@
                 "type": "basic",
                 "from": {
                   "key_code": "w",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_r",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open raycast://extensions/stanislau/totp/get-otp"
+                  }
+                ],
+                "description": "Open raycast://extensions/stanislau/totp/get-otp",
+                "type": "basic",
+                "from": {
+                  "key_code": "o",
                   "modifiers": {
                     "optional": [
                       "any"
@@ -3338,7 +3451,8 @@
       "virtual_hid_keyboard": {
         "country_code": 0,
         "indicate_sticky_modifier_keys_state": true,
-        "mouse_key_xy_scale": 100
+        "mouse_key_xy_scale": 100,
+        "keyboard_type_v2": "ansi"
       }
     }
   ]
